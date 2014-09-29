@@ -116,6 +116,7 @@ widthspec.bin
 /garbage-gen.exe
 /gettext_strings_test
 /gnulib/
+/gpt_unit_test
 /grub-2.[0-9]*/
 /grub-2.[0-9]*.tar.gz
 /grub-bios-setup
