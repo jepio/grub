@@ -37,6 +37,7 @@
 #include <grub/linux.h>
 #include <grub/machine/kernel.h>
 
+#include "verity-hash.h"
 GRUB_MOD_LICENSE ("GPLv3+");
 
 #ifdef GRUB_MACHINE_PCBIOS
@@ -1000,6 +1001,7 @@ grub_cmd_linux (grub_command_t cmd __attribute__ ((unused)),
       goto fail;
   }
 
+  grub_pass_verity_hash(&lh, linux_cmdline);
   len = prot_file_size;
   if (grub_file_read (file, prot_mode_mem, len) != len && !grub_errno)
     grub_error (GRUB_ERR_BAD_OS, N_("premature end of file %s"),
