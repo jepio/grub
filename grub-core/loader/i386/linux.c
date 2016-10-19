@@ -1007,7 +1007,7 @@ grub_cmd_linux (grub_command_t cmd __attribute__ ((unused)),
       goto fail;
   }
 
-  grub_pass_verity_hash(&lh, linux_cmdline);
+  grub_pass_verity_hash(&lh, linux_cmdline, maximal_cmdline_size);
   len = prot_file_size;
   if (grub_file_read (file, prot_mode_mem, len) != len && !grub_errno)
     grub_error (GRUB_ERR_BAD_OS, N_("premature end of file %s"),
