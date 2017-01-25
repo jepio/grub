@@ -38,7 +38,8 @@
 #include <grub/machine/kernel.h>
 #include <grub/safemath.h>
 
-#include "verity-hash.h"
+#include <grub/verity-hash.h>
+
 GRUB_MOD_LICENSE ("GPLv3+");
 
 #ifdef GRUB_MACHINE_PCBIOS
